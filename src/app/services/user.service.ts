@@ -1,10 +1,7 @@
-
-
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable,BehaviorSubject} from 'rxjs';
 import { Patient } from '../models/patient';
-import { map } from 'rxjs/operators';
 import {environment} from 'src/environments/environment';
 
 @Injectable({
@@ -38,8 +35,6 @@ this.currentUser = this.currentUserSubject.asObservable();
   {
       return this.http.post<any>(`${environment.baseUrl}?`+'id='+patient.Empid,patient);
   }
-
-
 
   deletePatient(id : number) : Observable<any>
   {
