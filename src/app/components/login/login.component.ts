@@ -22,6 +22,14 @@ export class LoginComponent implements OnInit {
      private router : Router,
      private route : ActivatedRoute) {
   }
+<<<<<<< HEAD
+=======
+  onLogin() {
+    localStorage.setItem('isLoggedin', 'true');
+    this.router.navigate(['/dashboard']);
+}
+
+>>>>>>> 8cc5f625be7266bc5cd68d2fd47019ae9641dca3
 
   ngOnInit() {
   }
