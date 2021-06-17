@@ -20,15 +20,12 @@
     "@angular/platform-browser": "~12.0.1",
     "@angular/platform-browser-dynamic": "~12.0.1",
     "@angular/router": "~12.0.1",
-<<<<<<< HEAD
-    "bootstrap": "^5.0.1",
-    "rxjs": "~6.6.0",
-=======
     "@ngx-translate/core": "^13.0.0",
     "@ngx-translate/http-loader": "^6.0.0",
     "bootstrap": "^5.0.1",
+    "messageformat": "^2.0.2",
+    "ngx-translate-messageformat-compiler": "^4.10.0",
     "rxjs": "^6.6.7",
->>>>>>> 8cc5f625be7266bc5cd68d2fd47019ae9641dca3
     "tslib": "^2.1.0",
     "zone.js": "~0.11.4"
   },
