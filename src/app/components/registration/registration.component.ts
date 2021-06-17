@@ -16,6 +16,7 @@ export class RegistrationComponent implements OnInit {
   regiForm!: FormGroup;
   submitted = false;
   register: any;
+ 
   constructor(private formBuilder: FormBuilder, 
     private service:UserService,
     private router : Router,
@@ -29,9 +30,10 @@ export class RegistrationComponent implements OnInit {
           lastName: ['', Validators.required],
           email: ['', [Validators.required, Validators.email]],
           contact : ['',Validators.required],
-          role: ['', Validators.required],
-         Empid:['', Validators.required],
-         dob: ['', [Validators.required, Validators.pattern(/^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$/)]],
+         dob:['',[Validators.required]],
+         // role: ['', Validators.required],
+         //Empid:['', Validators.required],
+        // dob: ['', [Validators.required, Validators.pattern(/^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$/)]],
           password: [
             '',
             [
@@ -52,10 +54,12 @@ export class RegistrationComponent implements OnInit {
   get f() { return this.regiForm.controls; }
 
   onSubmit() {
+    console.log("In reg form");
       this.submitted = true;
 
       // stop here if form is invalid
       if (this.regiForm.invalid) {
+        debugger;
           return;
       }
 

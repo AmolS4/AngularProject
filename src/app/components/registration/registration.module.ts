@@ -16,7 +16,8 @@ import {MatRadioModule} from '@angular/material/radio';
 
 
 import {HttpClientModule} from '@angular/common/http';
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
+ import {MatNativeDateModule} from '@angular/material/core';
 
 
 @NgModule({
@@ -35,7 +36,9 @@ import {HttpClientModule} from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     MatRadioModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ]
 })
 export class RegistrationModule { }

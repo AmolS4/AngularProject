@@ -47,6 +47,7 @@ this.currentUser = this.currentUserSubject.asObservable();
     }
     register(posts : Patient) : Observable<any>
     {
+      debugger;
       return this.http.post<any>(`${environment.baseUrl}`,posts);
     }
 
