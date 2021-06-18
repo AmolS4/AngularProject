@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { MustMatch } from './must-match.validator';
-import {UserService} from '../../services/user.service';
+import {AuthenticationService} from '../../services/AuthService';
 import {Patient} from '../../models/patient';
+import {UserService} from '../../services/user.service'
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -18,7 +19,8 @@ export class RegistrationComponent implements OnInit {
   register: any;
  
   constructor(private formBuilder: FormBuilder, 
-    private service:UserService,
+    private service: UserService,
+    private userServ : AuthenticationService,
     private router : Router,
     private route : ActivatedRoute) { }
 
@@ -65,7 +67,7 @@ export class RegistrationComponent implements OnInit {
 
      // alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.regiForm.value))
 
-      this.service.register(this.regiForm.value)
+      this.userServ.register(this.regiForm.value)
     .subscribe(data=>{
       console.log(data);
       this.router.navigate(['/login']);

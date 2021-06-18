@@ -26,3 +26,10 @@ export class Patient {
          this.confirmPassword=confirmPassword; 
       }
 }
+
+export interface Physician {
+   value: number;
+   viewValue : string;
+ }
+
+ 
